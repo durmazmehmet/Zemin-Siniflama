@@ -1,0 +1,130 @@
+var NS = (navigator.appName.indexOf('Netscape') != -1 || navigator.appName.indexOf('Opera') != -1);
+var NS4 = NS && (parseInt(navigator.appVersion) == 4);
+var IE = (document.all);
+var DOM = (document.getElementById);
+var OP = (navigator.userAgent.indexOf('Opera')>-1);
+
+
+//------------------------------------------------------
+// getObj(): cross-browser method of getting the
+// object for a named document element.
+// Returns a *string* (use eval() to get an actual reference
+// to the object).
+//------------------------------------------------------
+function getObj(divName, oWindow) {
+    var objString = "";
+	if(oWindow==null){oWindow=''}else{oWindow+='.'}
+    if (DOM) {  //DOM
+        return oWindow+"document.getElementById(\"" + divName + "\")";
+    }
+    if (IE) {   //IE 4
+        return oWindow+"document.all[\"" + divName + "\"]";
+    }
+    objString += oWindow+"document";   //NS 4
+    for (var i = 0; i < arguments.length; i++) {
+        objString += ".layers[\"" +arguments[i] + "\"]";
+    }
+    return objString;
+}
+
+function toObject(obj){
+	if(typeof obj!="object") {return eval(getObj(obj))}
+	return obj;
+}
+
+function setCSS(obj, cssProp, cssValue){
+	obj=toObject(obj)
+
+	if(obj && obj.style){
+        eval('obj.style.'+cssProp+'="'+cssValue+'"');
+    }
+	else if(!DOM && NS){
+		eval('obj.'+cssProp+'="'+cssValue+'"');
+	}
+}
+
+function getCSS(obj, cssProp){
+	obj=toObject(obj)
+
+	if(obj && obj.style){
+        return eval('obj.style.'+cssProp);
+    }
+	else if(!DOM && NS){
+		return eval('obj.'+cssProp+'');
+	}
+	return "";
+}
+
+function objShow(obj) {
+ obj=toObject(obj)
+
+ if (!DOM && NS){obj.visibility='show'}
+ else{setCSS(obj,'visibility','visible')}
+}
+
+function objHide(obj) {
+ obj=toObject(obj)
+
+ if (!DOM && NS){obj.visibility='hide'}
+ else{setCSS(obj,'visibility','hidden')}
+}
+
+function objResize(obj, sW, sH){
+	obj=toObject(obj)
+
+	if(sW!=null){
+		if (!DOM && NS){obj.width=sW}
+		else{setCSS(obj,'width',sW)}
+	}
+	if(sH!=null){
+		if (!DOM && NS){obj.height=sH}
+		else{setCSS(obj,'height',sH)}
+	}
+}
+
+function objMove(obj, sX, sY){
+	obj=toObject(obj)
+
+	if(!DOM && NS){
+		if(sX!=null)obj.top = sX
+		if(sY!=null)obj.left = sY
+	}
+	else{
+		if(sX!=null)setCSS(obj,'top',sX)
+		if(sY!=null)setCSS(obj,'left',sY)
+	}
+}
+
+function objClip(obj, sX, sR, sB, sY) {
+	obj=toObject(obj)
+
+	if(!DOM && NS) {
+		obj.clip.top = sX
+		obj.clip.right = sR
+		obj.clip.bottom = sB
+		obj.clip.left = sY
+	}
+	else{setCSS(obj,'clip', "rect("+sX+"px "+sR+"px "+sB+"px "+sY+"px)")}
+}
+
+function objInnerHTML(obj,str){
+	obj=toObject(obj)
+
+    with (obj){
+      if(IE){innerHTML = unescape(str)}
+	  else if (NS) {
+		if(DOM){innerHTML = str; }
+		else{
+          document.open();
+          document.write(str);
+          document.close();
+		}
+      }
+	}
+}
+
+function swapImg(imgName,imgSrc) {
+	if (document.images) {
+			eval("document.images."+imgName+".src = '"+imgSrc+"'");
+	}
+}

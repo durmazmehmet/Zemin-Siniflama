@@ -1,0 +1,135 @@
+var tmr;
+
+function hider(){
+	locked=false;
+	if (NS) document.releaseEvents(Event.MOUSEMOVE|Event.MOUSEOUT|Event.CLICK|Event.MOUSEUP|Event.KEYDOWN);
+	obj = eval(getObj('ttip')); 
+	objHide(obj); 
+	resizeObj="";
+}
+
+var CurrentTarget = null;
+var locked=false;
+var current_op=100;
+
+function Tooltip(e,layerContent,extra) {
+  var content, esemeny = (NS) ? e : window.event;
+  var retVal = true, obj = eval(getObj('ttip'));
+  if (obj == null) return retVal;
+  if (!NS && esemeny) window.event.cancelBubble=true; esemeny.returnValue=true;
+
+  if (layerContent && layerContent != null) {
+	if(layerContent.length<75){lWidth=Math.ceil(layerContent.length*6.2)}else{lWidth=tooltip_width}
+    content = ReturnMessage(layerContent,lWidth,extra)
+    SetTextOfLayer(obj,content,lWidth)
+  }
+
+  if (obj != null) {
+       if (esemeny.type == 'mouseover') {
+		 clearTimeout(tmr); 
+         if (!DOM && NS) {
+           ltx = window.pageXOffset; lty = window.pageYOffset;
+           x = esemeny.pageX; y = esemeny.pageY;
+           px = obj.left; py = obj.top;
+           dx = obj.document.width; dy = obj.document.height;
+           DX = window.innerWidth; DY = window.innerHeight;
+         }
+		 else if(DOM && NS){
+		   ltx = window.pageXOffset; lty = window.pageYOffset;
+           x = esemeny.pageX; y = esemeny.pageY;
+           px = obj.style.left; py = obj.style.top;
+           dx = parseInt(obj.style.width,10); dy = parseInt(obj.style.height,10);
+		   DX = window.innerWidth; DY = window.innerHeight;
+		 }
+		 else {     
+           ltx = document.body.scrollLeft; lty = document.body.scrollTop;
+           x = esemeny.clientX + ltx; y = esemeny.clientY + lty;
+           px = obj.style.pixelLeft; py = obj.style.pixelTop;
+           dx = obj.scrollWidth; dy = obj.scrollHeight;
+           DX = document.body.offsetWidth; DY = document.body.offsetHeight;
+         }
+
+         x += 15; y += 15;
+         xx = DX-(x-ltx+dx)-25; yy = DY-(y-lty+dy)-20;
+         if (xx<0) { x -= (dx); }
+         if (yy<0) { y -= (25+dy); }
+         if (x<ltx) { x = ltx; }
+         if (y<lty) { y = lty; }
+
+		 setCSS(obj,'left', x);
+		 setCSS(obj,'top', y);
+         //if (DOM) {obj.style.left = x; obj.style.top = y;} 
+         //else {obj.left = x; obj.top = y; }
+       } 
+
+       if (esemeny.type == 'click' && !locked) {
+			objHide(obj); retVal = false; if(!NS) esemeny.returnValue = false;
+       }
+       if ( (esemeny.type == 'mouseout') && (!NS || (esemeny.target == CurrentTarget)) ) {
+           document.onmousemove = null;
+	       document.onmouseout = null;
+		   document.onclick = null;
+            if (!NS && !esemeny.ctrlKey){clearTimeout(tmr); tmr=setTimeout('hider()',700)}
+			else 
+				if(NS && !locked){document.releaseEvents(Event.MOUSEMOVE|Event.MOUSEOUT|Event.CLICK|Event.MOUSEUP|Event.KEYDOWN); clearTimeout(tmr); tmr=setTimeout('hider()',700)}
+            CurrentTarget = null; 
+       }	
+       
+       if (esemeny.type == 'mouseover') {
+		   locked=false;
+           document.onmousemove = Tooltip
+	       document.onmouseout = Tooltip
+           document.onclick = Tooltip
+         if (NS) { 
+           CurrentTarget = esemeny.target; 
+           document.captureEvents(Event.MOUSEMOVE|Event.MOUSEOUT|Event.CLICK|Event.MOUSEUP|Event.KEYDOWN);
+         }
+	 objShow(obj);
+       } 
+  }
+  return retVal;
+}
+
+var LastObjText = null;
+
+function SetTextOfLayer(obj,newText,wt) {
+  if(LastObjText != newText) {
+		LastObjText = newText;
+		objInnerHTML(obj,newText);
+		setCSS(obj,'width',wt);
+  }
+}
+
+function ReturnMessage(msg,wt,extra) {
+ justify="<p align='justify'>";
+ if(extra && extra>3){wt=extra; cpad='0'; if(NS){justify="";}}else{cpad='10'; }
+ if(extra && extra==0){justify="";}
+ if(NS && !DOM){brd='border=1 bordercolor="'+tooltip_sd+'"';}else{brd='style="border-width:1px; border-style:solid; border-color:'+tooltip_sd+';"'}
+ var txt = '<table width='+wt+' bgcolor="'+tooltip_bg+'" cellspacing="0" cellpadding="'+cpad+'" '+brd+'><tr><td>'+justify+'<span class="tooltip">';
+ txt += msg;
+ txt += '</span></td></tr></table>';
+ return txt;
+}
+
+function keyDown(e){
+ if(NS){
+     if(e.which==0){if(document.ttip.visibility=='show'){locked=true}else{locked=false}}
+     else{locked=false}
+ }
+}
+
+function TooltipOP(e,txt){
+  newwin = window.open("","tooltip","width=300,height=150,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,copyhistory=0");
+  newwin.document.write('<body bgcolor="#E2E2E2"><font face="Arial" size="2">'+txt+'</font></body>');
+  newwin.focus();
+}
+
+// Keywords:
+var keyTbl='<table border="0" cellspacing="0" cellpadding="0" width="350" height="100%"><tr><td width="100%" class="kwBGimg" height="22" valign="middle"><span class="keydef">&nbsp; ';
+var keyTbl_2='</span></td><td align="right" valign="top" width="65"><img src="style/skin1/images/bg2.gif"></td></tr><tr><td colspan="2"><div align=justify class="pad"><span class="tooltip">';
+var keyTbl_3='</div></td></tr></table>';
+
+keyImg = new Image();
+keyImg.src = 'style/skin1/images/bg2.gif';
+
+document.onkeydown = keyDown;

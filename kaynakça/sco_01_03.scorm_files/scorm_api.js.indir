@@ -1,0 +1,92 @@
+// For SCORM 2004 only 
+var gAPI = null; 
+var gnScormSessionState = 0; // 0=not initialized; 1=initialized; 2=terminated 
+
+function ScanForAPI(win) 
+{ 
+  var nFindAPITries = 500; 
+  while ((win.API_1484_11 == null)&&(win.parent != null)&&(win.parent != win)) 
+  { 
+    nFindAPITries--; 
+    if (nFindAPITries < 0){return null; }
+    win = win.parent; 
+  }
+  return win.API_1484_11; 
+} 
+function GetAPI(win) 
+{ 
+  if ((win.parent != null) && (win.parent != win)) 
+  { 
+    gAPI = ScanForAPI(win.parent); 
+  } 
+  if ((gAPI == null) && (win.opener != null)) 
+  { 
+    gAPI = ScanForAPI(win.opener); 
+  } 
+} 
+function ScormInitialize() 
+{ 
+  if (gnScormSessionState == 0) 
+  { 
+    GetAPI(window); 
+    if ((gAPI != null) && (gAPI.Initialize("") == "true")) 
+    { 
+      gnScormSessionState = 1; 
+    }
+	else{
+		top.window.status = 'SCORM API NOT FOUND!';
+	}
+  } 
+} 
+function ScormTerminate() 
+{ 
+  if (gnScormSessionState == 1) 
+  { 
+    if (gAPI.Terminate("") == "true") 
+    { 
+      gnScormSessionState = 2; 
+      return "true"; 
+    } 
+  } 
+  return "false"; 
+}
+function ScormGetLastError() 
+{ 
+  var sErr = "-1"; 
+  if (gAPI) sErr = gAPI.GetLastError(); 
+  return sErr; 
+} 
+function ScormGetErrorString(sErr) 
+{ 
+  var strErr = "SCORM API not available"; 
+  if (gAPI)  
+  { 
+    // Note: Get Error functions may work even if the session is not open 
+    // (to help diagnose session management errors), but we're still careful, 
+    // and so we check whether each function is available before calling it. 
+    if ((isNaN(parseInt(sErr))) && (gAPI.GetLastError)) sErr = gAPI.GetLastError(); 
+    if (gAPI.GetErrorText) strErr = gAPI.GetErrorText(sErr.toString()); 
+  } 
+  return strErr; 
+} 
+function ScormGetValue(what) 
+{ 
+  var strR = ""; 
+  if (gnScormSessionState == 1) 
+  { 
+    strR = gAPI.GetValue(what); 
+    if ((strR == "") && (ScormGetLastError() != 0)){ return false; }; 
+  }  
+  return strR; 
+} 
+function ScormSetValue(what, value) 
+{ 
+  if (gnScormSessionState == 1) 
+  { 
+    return gAPI.SetValue(what, value); 
+  }  
+  else 
+  { 
+    return "false"; 
+  } 
+}

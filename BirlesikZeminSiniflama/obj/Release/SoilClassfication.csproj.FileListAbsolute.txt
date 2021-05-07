@@ -1,0 +1,11 @@
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\bin\Release\BZS.exe.config
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\bin\Release\BZS.exe
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\bin\Release\BZS.pdb
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\com.mehmetdurmaz.SoilClassfication.UserUI.resources
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\com.mehmetdurmaz.SoilClassfication.Properties.Resources.resources
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\SoilClassfication.csproj.GenerateResource.cache
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\SoilClassfication.csproj.CoreCompileInputs.cache
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\BZS.exe
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\BZS.pdb
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\SoilClassfication.csprojAssemblyReference.cache
+Z:\Developer\Git\BZS2\BirlesikZeminSiniflama\obj\Release\SoilClassfication.csproj.Fody.CopyLocal.cache

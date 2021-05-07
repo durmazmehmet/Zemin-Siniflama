@@ -1,0 +1,44 @@
+P, .fontos {
+	line-height:130%;
+}
+
+TD, .normal, .C0Kulcsszo, LI  {
+	font-size: 11pt;
+}
+
+.elsocim {
+	font-size: 19pt;
+}
+.masodcim, .masodcim_m {
+	font-size: 16pt;
+}
+.harmadcim, .harmadcim_m {
+	font-size: 14pt;
+}
+.negyedcim, .negyedcim_m {
+	font-size: 12pt;
+}
+
+.A5Abracim, .A4Abrakommentar {
+	font-size: 9pt;
+}
+.tooltip, .aux_txt {
+	font-size: 9pt;
+}
+.footnote {
+	font-size: 11pt;
+}
+
+.mellekes {
+	font-size: 10pt;
+}
+.mellekes LI {
+	font-size: 10pt;
+}
+.mellekes .quote {
+	font-size: 10pt;
+}
+
+.copy {
+	font-size: 8pt;
+}

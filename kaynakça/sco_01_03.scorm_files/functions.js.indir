@@ -1,0 +1,112 @@
+//**********************************
+//  Common functions (offline)
+//**********************************
+
+var currentURL = '';
+
+function goToURL(url){
+	currentURL=url;
+	OpenNewWindow('internet','tools/jumpURL.htm',420,270); 
+}
+
+function goToLocal(url,win){
+	OpenNewWindow('local',url,290,200);
+}
+
+var zoomImage = '';
+
+// Image functions
+function zoomImg(img){
+	 zoomImage = img;
+     OpenNewWindow('imgZoom','tools/zoom.htm');
+}
+
+function slideShow(path,slideshow){
+	 if(path==''){path='content/misc/slides/';}
+     OpenNewWindow('slideshow',path+'slides_'+slideshow+'.htm',290,300,"","",40);
+}
+
+// navimap:
+var navimapLetters = new Array('','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+
+function naviMap(path, img, dir, ext){
+    showSrch=0;
+	var maxrows=eval(img+'_maxrows');
+	var maxcols=eval(img+'_maxcols');
+
+	var showrow=eval(img+'_showrow');
+	var showcol=eval(img+'_showcol');
+
+	row=eval(img+'_row');
+	col=eval(img+'_col');
+	
+	switch(dir){
+	  case 'r': if(col+showcol<maxcols){col=col+1;} break;
+	  case 'd': if(row+showrow<maxrows+1){row=row+1;} break;
+	  case 'l': if(col>0){col=col-1;} break;
+	  case 'u': if(row>1){row=row-1;} break;
+	}
+	
+	eval(img+'_row=row');
+	eval(img+'_col=col');
+
+	for(i=1; i<showrow+1; i++){
+	    curr_col=col;
+		for(j=1; j<showcol+1; j++){
+
+			colstr=(curr_col+j)+'';
+			switch(colstr.length){
+				case 1: colstr='00'+colstr; break;
+				case 2: colstr='0'+colstr; break;
+			}
+		   naviImg = eval('document.images["'+img+'_'+i+'_'+j+'"]');
+		   naviImg.src = path+'/'+img+'_'+navimapLetters[row+(i-1)]+'_'+colstr+'.'+ext;
+		}
+    }
+}
+
+// CONTROLLING FLASH MOVIES:
+var flashPlaying = null;
+
+function flashObj(moviename){
+	if(IE){return window[moviename]}
+	else{return document[moviename]}
+}
+
+function movieIsLoaded(movie) {
+  if(typeof(movie)!="undefined" && movie!=null) {
+      return movie.PercentLoaded() == 100;
+  }else{
+	return false;
+  }
+}
+
+function playFlash(moviename){
+  obj1 = flashObj(moviename);
+  if(movieIsLoaded(obj1)){
+	if(flashPlaying!=null){stopFlash(flashPlaying)}
+	obj1.Play();
+	flashPlaying=moviename;
+  }
+}
+
+function stopFlash(moviename){
+  obj = flashObj(moviename);
+  if(movieIsLoaded(obj)){
+	obj.StopPlay();
+	obj.Rewind();
+	flashPlaying=null;
+  }
+}
+
+//**********************
+// Dummy functions
+//**********************
+
+function clickSrc(id){}
+function goToLnk(sub,less,chap,bm,open_new){}
+function goTo(chap,open_new){}
+function goToLib(sub,less,chap,bm){}
+function paraLnk(sub,less,chap,bm,pars){}
+function loader(){}
+function callHelp(page){}

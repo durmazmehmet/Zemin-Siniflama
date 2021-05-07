@@ -1,0 +1,70 @@
+function OpenNewWindow(name, url, width, height, resizable, modeLess, x, y, params, closeOpener) {
+  if (name == null || name == "") {
+		alert("Error: name of window is missing.\nThe right format: OpenNewWindow(name, URL, width, height, x, y)");
+  }
+  else {
+    if (url == null) {url = ""; }
+    if (width == null || width == "") { width=Math.ceil(screen.width*0.8); if(width<799){width = 800} }
+	if (height == null || height == "") { height=Math.ceil(screen.height*0.8); if(height<599){height = 600} }
+    if (x == null || y == null) {
+			x = (screen.height-height)/2; if (x>40){ x = x-30; };
+			y = (screen.width-width)/2;
+	}
+	if (resizable == null || resizable == ""){ resizable=true; }
+	if (params == null || params == "") { params = "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,copyhistory=0,"; }
+
+	params = "width="+width+",height="+height+",top="+x+",left="+y+"," + params + ",";
+	params+= (resizable)? "resizable=1," : "resizable=0,";
+
+	// modeless dialog:
+	if (modeLess){
+		
+	    if(IE && DOM){  //IE5+
+			params = (resizable)? "resizable:yes;" : "resizable:no;";
+			showModelessDialog(url, null, 'dialogWidth:'+width+'px;dialogHeight:'+height+'px;status:no;'+params+'center:yes;help:no;');
+		}
+		else if(NS && !DOM){  //NS4
+			netscape.security.PrivilegeManager.enablePrivilege('UniversalBrowserWrite');
+			var newwin = window.open(url, name, params + "alwaysRaised=1");
+		}
+		else if(NS && DOM){  //NS6
+			var newwin = openDialog(url, name, params);
+		}
+		else{
+			var newwin = window.open(url, name, params);
+		}
+	}
+	else {
+
+		var newwin = window.open(url, name, params);
+
+		if (NS4) {
+			newwin.outerWidth = width;
+			newwin.outerHeight = height;
+		}else {
+			newwin.resizeTo(width, height);
+		}
+	
+	}
+	// check if window was closed by popup blockers:
+	if(DOM){
+		exists = false;
+		if (newwin && !newwin.closed){
+			exists = true;
+			try{newwin.focus()}
+			catch(e){exists = false}
+		}
+		if(!exists){
+			alert("The window you attempted to open was blocked. Disable the pop-up blocker in your browser.");
+		}
+	}
+	
+	// close opener:
+	if (closeOpener && newwin.opener != null) {
+		newwin.opener.close();
+		newwin.opener = null;
+	}
+
+
+  }
+}

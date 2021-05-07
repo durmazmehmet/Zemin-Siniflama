@@ -1,0 +1,10 @@
+
+var tooltip_bg="#F8F8F8";  //footnote pop-up layer background color 
+var tooltip_sd="#ADADAD";  //footnote pop-up layer border
+var tooltip_width=360;		//footnote pop-up default layer width
+
+var toolbarBG="#B2BECA";	  //toolbar background
+var menuMouseOver="#CAD2DE";  //menu mouse-over background color
+var menuBorder="#AFBDCD";	  //menu border color		
+var menuFontColor="#6E767A";	  //menu font color
+var menuFontMouseOver="black";	//menu mouse-over font color
