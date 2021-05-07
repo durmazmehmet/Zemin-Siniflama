@@ -1,0 +1,75 @@
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csproj.GenerateResource.Cache
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csprojResolveAssemblyReference.cache
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.config
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.manifest
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.application
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.pdb
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Data.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Deployment.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Drawing.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Windows.Forms.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Xml.dll
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.BZS.resources
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsproj.Properties.Resources.resources
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csproj.GenerateResource.Cache
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe.manifest
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.application
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe
+C:\Users\MehmetDurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.pdb
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.config
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.pdb
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.manifest
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.application
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.pdb
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Data.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Deployment.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Drawing.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Windows.Forms.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Xml.dll
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csprojResolveAssemblyReference.cache
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.BZS.resources
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsproj.Properties.Resources.resources
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csproj.GenerateResource.Cache
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe.manifest
+F:\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.application
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.config
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.pdb
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.manifest
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.application
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.pdb
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Data.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Deployment.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Drawing.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Windows.Forms.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Xml.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.BZS.resources
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsproj.Properties.Resources.resources
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe.manifest
+C:\Users\h-mdurmaz\Documents\Visual Studio 2013\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.application
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.config
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.pdb
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe.manifest
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.application
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.exe
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\bzsv12.pdb
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Data.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Deployment.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Drawing.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Windows.Forms.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\bin\Release\System.Xml.dll
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csprojResolveAssemblyReference.cache
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.BZS.resources
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsproj.Properties.Resources.resources
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\BirlesikZeminSiniflama.csproj.GenerateResource.Cache
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.exe.manifest
+C:\Users\h-mdurmaz\Documents\Visual Studio 2015\Projects\BirlesikZeminSiniflama\BirlesikZeminSiniflama\obj\Release\bzsv12.application
