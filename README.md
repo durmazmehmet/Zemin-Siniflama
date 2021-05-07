@@ -1,1 +1,1 @@
-# Zemin-Siniflama
+# Zemin Sınıflama Yazılımı
